@@ -53,6 +53,13 @@ body {
   padding: 20px;
 }
 
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
 /* header style */
 .menu {
   display: flex;
@@ -80,6 +87,7 @@ body {
   display: flex;
   padding: 10px 20px;
   border-radius: 8px;
+  transition: 0.3s ease;
 }
 .menu > nav li:hover {
   background-color: rgba(17, 186, 48, 0.1);
@@ -133,12 +141,81 @@ body {
   margin-bottom: 20px;
 }
 
+/* Standard Curriculum style  */
+.curriculum-boxs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+.curriculum-box {
+  width: calc(100% - 30px);
+  text-align: center;
+  padding: 50px 20px;
+  border: 1px solid firebrick;
+  border-radius: 10px;
+}
+.curriculum-box:first-child {
+  background: linear-gradient(#def5ff 0%, hsla(0, 0%, 100%, 0.403) 100%);
+}
+.curriculum-box:nth-child(2) {
+  background: linear-gradient(#fff4dc 0%, hsla(0, 0%, 100%, 0.403) 100%);
+}
+.curriculum-box:last-child {
+  background: linear-gradient(#eee1ff 0%, hsla(0, 0%, 100%, 0.403) 100%);
+}
+
+.curriculum-box > h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 30px 0;
+}
+.curriculum-box > p {
+  font-size: 1rem;
+  color: #808080;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-family: "Raleway", serif;
+}
+.curriculum-box > a {
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+}
+.curriculum-box > a:hover {
+  background-color: rgba(17, 186, 48, 0.2);
+}
+.slide-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 20px;
+}
+.slide-btn > button {
+  background-color: #fea301;
+  border: none;
+  padding: 20px 35px;
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.slide-btn > button:hover {
+  background-color: #05d4df;
+}
 /* media query style */
 @media screen and (max-width: 576px) {
   .logo > h1,
   .menu > nav,
   .menu > button,
-  .br {
+  .br,
+  .slide-btn {
     display: none;
   }
   .menu > svg {
@@ -154,5 +231,11 @@ body {
   .hero-text,
   .hero-title {
     text-align: center;
+  }
+  .curriculum-boxs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin-top: 30px;
   }
 }
